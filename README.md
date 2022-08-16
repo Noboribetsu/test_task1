@@ -12,6 +12,8 @@
 иерархий.
 * Не забудьте отобразить должность сотрудника
 
+Django/Django-boosrap4/PostgreSQL
+
 [Demo on Heroku](https://obscure-garden-24670.herokuapp.com/)
 
 ### Requrements:
