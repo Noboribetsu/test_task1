@@ -6,13 +6,14 @@
         <div class="card-body">
         <h5 class="card-title">{{ employee.fullname }}</h5>
         <p class="card-text"><span class="font-weight-bold">Position:</span> {{ employee.position }}</p>
-        <p class="card-text"><span class="font-weight-bold">Salary:</span> {{ employee.salary }}</p>
+        <p class="card-text"><span class="font-weight-bold">Salary:</span> ${{ employee.salary }}</p>
         {% if employee.supervisor %}
         <p class="card-text"><span class="font-weight-bold">Supervisor:</span> {{ employee.supervisor.fullname }}</p>
         {% endif %}
         {% if employee.subordinates.all %}
+        <p class="card-text"><span class="font-weight-bold">Subordinates:</span> {{ employee.subordinates.count }}</p>
         <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse{{ employee.id }}" aria-expanded="false" aria-controls="collapse{{ employee.id }}">
-            Subordinates
+            Show
         </button>
         </div>
 </ol>
