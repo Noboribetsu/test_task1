@@ -1,0 +1,25 @@
+{% load bootstrap4 %}
+{% for employee in page_obj %}
+<ol>
+    <div class="card bg-light mb-3" style="max-width: 18rem;">
+        <div class="card-header">Employee details</div>
+        <div class="card-body">
+        <h5 class="card-title">{{ employee.fullname }}</h5>
+        <p class="card-text"><span class="font-weight-bold">Position:</span> {{ employee.position }}</p>
+        <p class="card-text"><span class="font-weight-bold">Salary:</span> {{ employee.salary }}</p>
+        {% if employee.supervisor %}
+        <p class="card-text"><span class="font-weight-bold">Supervisor:</span> {{ employee.supervisor.fullname }}</p>
+        {% endif %}
+        {% if employee.subordinates.all %}
+        <p class="card-text"><span class="font-weight-bold">Subordinates &#8659;</span></p>
+        </div>
+</ol>
+    <ul>
+        {% include 'employee_list.html' with page_obj=employee.subordinates.all %}
+    </ul>
+{% else %}
+        <p class="card-text"><span class="font-weight-bold">No subordinates.</span></p>
+        </div>
+</ol>
+{% endif %}
+{% endfor %}

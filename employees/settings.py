@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'employees',
     'django_seed',
     'django_extensions',
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [

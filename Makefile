@@ -12,6 +12,9 @@ setup:
 	make install
 	make migrate
 
+seed:
+	poetry run python manage.py db_seed
+
 deploy:
 	git push heroku main
 
