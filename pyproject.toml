@@ -11,6 +11,8 @@ python-dotenv = "^0.20.0"
 dj-database-url = "^1.0.0"
 pip = "^22.2.2"
 psycopg2-binary = "^2.9.3"
+django-seed = "^0.3.1"
+django-extensions = "^3.2.0"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^5.0.4"
