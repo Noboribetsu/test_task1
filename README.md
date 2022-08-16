@@ -23,6 +23,9 @@
 ```bash
 make setup
 ```
+### Fullfill .env:
+See .env.example
+
 ### Run server:
 ```bash
 make start
