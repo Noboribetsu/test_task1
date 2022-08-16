@@ -9,6 +9,14 @@
     <title>List of employees</title>
 </head>
 <body>
+    <header class="shadow masthead mb-auto rounded border bg-primary pl-3 p-2 m-3">
+        <div class="inner">
+          <a class="pl-1 nav-link" href={% url 'index' %}><h2 class="font-weight-bold text-white text-left">Employees</h2></a>
+          <nav class="clearfix">
+            <a class="btn rounded border bg-light m-2 p-1 px-2 active float-left" href={% url 'index' %}>List</a>
+          </nav>
+        </div>
+      </header>
 <main role="main" class="shadow rounded inner cover px-2 mx-5 mt-4">
 <h1 class="pt-2">List of employees:</h1>
 <ul class="p-3 m-2">

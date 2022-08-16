@@ -11,12 +11,16 @@
         <p class="card-text"><span class="font-weight-bold">Supervisor:</span> {{ employee.supervisor.fullname }}</p>
         {% endif %}
         {% if employee.subordinates.all %}
-        <p class="card-text"><span class="font-weight-bold">Subordinates &#8659;</span></p>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse{{ employee.id }}" aria-expanded="false" aria-controls="collapse{{ employee.id }}">
+            Subordinates
+        </button>
         </div>
 </ol>
+<div class="collapse" id="collapse{{ employee.id }}">
     <ul>
         {% include 'employee_list.html' with page_obj=employee.subordinates.all %}
     </ul>
+</div>
 {% else %}
         <p class="card-text"><span class="font-weight-bold">No subordinates.</span></p>
         </div>
