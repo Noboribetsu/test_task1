@@ -20,17 +20,3 @@ deploy:
 
 lint:
 	poetry run flake8 .
-
-test:
-	poetry run python manage.py test
-
-test-coverage:
-	poetry run coverage run manage.py test task_manager	
-	poetry run coverage xml
-
-
-messages:
-	poetry run django-admin makemessages -l ru
-
-compilemessages:
-	poetry run django-admin compilemessages 
