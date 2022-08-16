@@ -6,7 +6,7 @@ from employees.models import EmployeesList
 def run():
     """
         Seed DB with employee's details.
-        Parametrs:
+        Parameters:
         Level - numbers of hierarchy levels
         Start - number of records for first level hierarchy.
         Step - increase number of records for every level
