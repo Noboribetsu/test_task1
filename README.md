@@ -17,7 +17,7 @@ Django/Django-boosrap4/PostgreSQL
 [Demo on Heroku](https://obscure-garden-24670.herokuapp.com/)
 
 ### Requrements:
-* Python 3.9+
+* Python 3.10+
 * Poetry
 * GNU Make
 
