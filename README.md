@@ -36,5 +36,5 @@ make start
 ### Seed your DB:
 ```bash
 make seed
-# You can choose number of records see /scripts/db_seed.py
+# You can choose number of records see employees/scripts/db_seed.py
 ```
