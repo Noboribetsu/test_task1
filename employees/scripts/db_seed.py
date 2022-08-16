@@ -13,7 +13,7 @@ def run():
     """
     seeder = Seed.seeder()
 
-    def db_seed(level=5, start=5000, step=2500):
+    def db_seed(level=5, start=500, step=500):
         inserted_pks = {}
         i = 0
         while i < level:
