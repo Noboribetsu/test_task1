@@ -16,8 +16,11 @@ Including another URLconf
 from .views import EmployeesHierarchy
 from django.contrib import admin
 from django.urls import path
+from django.urls import include
 
 urlpatterns = [
     path('', EmployeesHierarchy.as_view(), name='index'),
     path('admin/', admin.site.urls),
+    path('api/', include('employees.API.urls')),
+    path('api-auth/', include('rest_framework.urls')),
 ]

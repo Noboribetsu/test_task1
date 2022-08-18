@@ -10,3 +10,6 @@ class EmployeesList(models.Model):
         'self',
         on_delete=models.SET_NULL,
         null=True, related_name='subordinates')
+
+    def __str__(self):
+        return f'{self.fullname} - {self.position}'

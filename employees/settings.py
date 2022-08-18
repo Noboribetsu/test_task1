@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'django_seed',
     'django_extensions',
     'bootstrap4',
+    'rest_framework',
+    'employees.API',
 ]
 
 MIDDLEWARE = [
@@ -138,3 +140,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 5
+}
