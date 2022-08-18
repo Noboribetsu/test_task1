@@ -12,8 +12,9 @@
 иерархий.
 * Не забудьте отобразить должность сотрудника
 
-Django/Django-boostrap4/Django REST framework
-PostgreSQL
+Стек
+* Django/Django-boostrap4/Django REST framework
+* PostgreSQL
 
 [Demo on Heroku](https://obscure-garden-24670.herokuapp.com/)
 
