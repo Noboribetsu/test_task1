@@ -12,9 +12,68 @@
 иерархий.
 * Не забудьте отобразить должность сотрудника
 
-Django/Django-boostrap4/PostgreSQL
+Django/Django-boostrap4/Django REST framework
+PostgreSQL
 
 [Demo on Heroku](https://obscure-garden-24670.herokuapp.com/)
+
+### API:
+
+[Api](https://obscure-garden-24670.herokuapp.com/api/employees/)
+
+/api/employees/
+
+Allow: GET, POST, HEAD, OPTIONS
+
+/api/employees/id
+
+Allow: GET, PUT, PATCH, DELETE, HEAD, OPTIONS
+
+
+#### Usage:
+```bash
+curl -H 'Accept: application/json; indent=4' https://obscure-garden-24670.herokuapp.com/api/employees/
+{
+    "count": 7500,
+    "next": "https://obscure-garden-24670.herokuapp.com/api/employees/?page=2",
+    "previous": null,
+    "results": [
+        {
+            "id": 1,
+            "fullname": "Darlene Hawkins",
+            "position": "Insurance account manager",
+            "salary": "76349.05",
+            "employment_date": "2022-01-30",
+            "supervisor": null,
+            "subordinates": [
+                1288,
+                1369
+            ]
+        },
+        {
+            "id": 2,
+            "fullname": "Traci Shaffer",
+            "position": "Lighting technician, broadcasting/film/video",
+            "salary": "80085.74",
+            "employment_date": "2020-08-24",
+            "supervisor": null,
+            "subordinates": []
+        },
+.......
+}
+```
+```bash
+curl -H 'Accept: application/json; indent=4' https://obscure-garden-24670.herokuapp.com/api/employees/2
+{
+    "id": 2,
+    "fullname": "Traci Shaffer",
+    "position": "Lighting technician, broadcasting/film/video",
+    "salary": "80085.74",
+    "employment_date": "2020-08-24",
+    "supervisor": null,
+    "subordinates": []
+}
+```
 
 ### Requrements:
 * Python 3.10+
